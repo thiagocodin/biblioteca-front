@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 const api = axios.create({
-  baseURL: 'https://biblioteca-back-jcmr.onrender.com/api/auth',
+  baseURL: 'https://biblioteca-backend-8nmn.onrender.com//auth',
   withCredentials: true,
 });
 
