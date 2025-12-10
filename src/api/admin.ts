@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 const api = axios.create({
-  baseURL: 'https://biblioteca-backend-8nmn.onrender.com',
+  baseURL: 'https://biblioteca-backend-8nmn.onrender.com/api',
   withCredentials: true,
 });
 
@@ -89,4 +89,5 @@ export async function approveLoan(loanId: number) {
 export async function getAllUsers() {
   const response = await api.get('/users');
   return response.data;
+
 }
