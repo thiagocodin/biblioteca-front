@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 const api = axios.create({
-  baseURL: 'https://biblioteca-backend-8nmn.onrender.com',
+  baseURL: 'https://biblioteca-backend-8nmn.onrender.com/api',
   withCredentials: true,
 });
 
@@ -39,4 +39,5 @@ export async function createReview(bookId: number, data: CreateReviewData) {
 export async function getBookReviews(bookId: number): Promise<Review[]> {
   const response = await api.get(`/reviews/book/${bookId}`);
   return response.data as Review[];
+
 }
