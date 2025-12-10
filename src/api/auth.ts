@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 const api = axios.create({
-  baseURL: 'https://biblioteca-backend-8nmn.onrender.com/auth',
+  baseURL: 'https://biblioteca-backend-8nmn.onrender.com/api',
   withCredentials: true,
 });
 
@@ -24,4 +24,5 @@ export async function login(email: string, password: string): Promise<LoginRespo
 export async function register(name: string, email: string, password: string): Promise<LoginResponse> {
   const response = await api.post('/register', { name, email, password }) as { data: LoginResponse };
   return response.data;
+
 }
